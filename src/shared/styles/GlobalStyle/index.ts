@@ -1,151 +1,125 @@
 import { css } from '@emotion/react'
 
+/**
+ * Made by Elly Loel - https://ellyloel.com/
+ */
 export const globalStyle = css`
-  /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+  * {
+    margin: 0;
+    padding: 0;
+    line-height: calc(0.25rem + 1em + 0.25rem);
+  }
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+  *:where(:not(fieldset, progress, meter)) {
+    border-width: 0;
+    border-style: solid;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+  }
   html {
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
+    block-size: 100%;
+    -webkit-text-size-adjust: none;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html:focus-within {
+      scroll-behavior: smooth;
+    }
   }
   body {
-    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeSpeed;
+    min-block-size: 100%;
   }
-  main {
+  :where(img, svg, video, canvas, audio, iframe, embed, object) {
     display: block;
+  }
+  :where(img, svg, video) {
+    block-size: auto;
+    max-inline-size: 100%;
+  }
+  :where(svg) {
+    stroke: none;
+    fill: currentColor;
+  }
+  :where(svg):where(:not([fill])) {
+    stroke: currentColor;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  :where(svg):where(:not([width])) {
+    inline-size: 5rem;
+  }
+  :where(input, button, textarea, select),
+  :where(input[type='file'])::-webkit-file-upload-button {
+    color: inherit;
+    font: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+  }
+  :where(textarea) {
+    resize: vertical;
+  }
+  @supports (resize: block) {
+    :where(textarea) {
+      resize: block;
+    }
+  }
+  :where(p, h1, h2, h3, h4, h5, h6) {
+    overflow-wrap: break-word;
   }
   h1 {
     font-size: 2em;
-    margin: 0.67em 0;
   }
-  hr {
-    box-sizing: content-box;
-    height: 0;
-    overflow: visible;
+  :where(ul, ol)[role='list'] {
+    list-style: none;
   }
-  pre {
-    font-family: monospace, monospace;
-    font-size: 1em;
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
   }
-  a {
-    background-color: transparent;
+  :where(a[href], area, button, input, label[for], select, summary, textarea, [tabindex]:not([tabindex*='-'])) {
+    cursor: pointer;
+    touch-action: manipulation;
   }
-  abbr[title] {
-    border-bottom: none;
-    text-decoration: underline;
-    text-decoration: underline dotted;
+  :where(input[type='file']) {
+    cursor: auto;
   }
-  b,
-  strong {
-    font-weight: bolder;
+  :where(input[type='file'])::-webkit-file-upload-button,
+  :where(input[type='file'])::file-selector-button {
+    cursor: pointer;
   }
-  code,
-  kbd,
-  samp {
-    font-family: monospace, monospace;
-    font-size: 1em;
+  @media (prefers-reduced-motion: no-preference) {
+    :focus-visible {
+      transition: outline-offset 145ms cubic-bezier(0.25, 0, 0.4, 1);
+    }
+    :where(:not(:active)):focus-visible {
+      transition-duration: 0.25s;
+    }
   }
-  small {
-    font-size: 80%;
+  :where(:not(:active)):focus-visible {
+    outline-offset: 5px;
   }
-  sub,
-  sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
+  :where(button, button[type], input[type='button'], input[type='submit'], input[type='reset']),
+  :where(input[type='file'])::-webkit-file-upload-button,
+  :where(input[type='file'])::file-selector-button {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
+    text-align: center;
   }
-  sub {
-    bottom: -0.25em;
+  :where(button, button[type], input[type='button'], input[type='submit'], input[type='reset'])[disabled] {
+    cursor: not-allowed;
   }
-  sup {
-    top: -0.5em;
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
   }
-  img {
-    border-style: none;
-  }
-  button,
-  input,
-  optgroup,
-  select,
-  textarea {
-    font-family: inherit;
-    font-size: 100%;
-    line-height: 1.15;
-    margin: 0;
-  }
-  button,
-  input {
-    overflow: visible;
-  }
-  button,
-  select {
-    text-transform: none;
-  }
-  [type='button'],
-  [type='reset'],
-  [type='submit'],
-  button {
-    -webkit-appearance: button;
-  }
-  [type='button']::-moz-focus-inner,
-  [type='reset']::-moz-focus-inner,
-  [type='submit']::-moz-focus-inner,
-  button::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
-  }
-  [type='button']:-moz-focusring,
-  [type='reset']:-moz-focusring,
-  [type='submit']:-moz-focusring,
-  button:-moz-focusring {
-    outline: 1px dotted ButtonText;
-  }
-  fieldset {
-    padding: 0.35em 0.75em 0.625em;
-  }
-  legend {
+
+  * {
     box-sizing: border-box;
-    color: inherit;
-    display: table;
-    max-width: 100%;
-    padding: 0;
-    white-space: normal;
-  }
-  progress {
-    vertical-align: baseline;
-  }
-  textarea {
-    overflow: auto;
-  }
-  [type='checkbox'],
-  [type='radio'] {
-    box-sizing: border-box;
-    padding: 0;
-  }
-  [type='number']::-webkit-inner-spin-button,
-  [type='number']::-webkit-outer-spin-button {
-    height: auto;
-  }
-  [type='search'] {
-    -webkit-appearance: textfield;
-    outline-offset: -2px;
-  }
-  [type='search']::-webkit-search-decoration {
-    -webkit-appearance: none;
-  }
-  ::-webkit-file-upload-button {
-    -webkit-appearance: button;
-    font: inherit;
-  }
-  details {
-    display: block;
-  }
-  summary {
-    display: list-item;
-  }
-  template {
-    display: none;
-  }
-  [hidden] {
-    display: none;
   }
 `
