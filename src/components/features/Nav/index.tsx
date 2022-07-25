@@ -1,9 +1,15 @@
 import { useRouter } from 'next/router'
 import { useCallback, useState } from 'react'
-import { BsFillChatFill } from 'react-icons/bs'
 import { FaHome, FaUserAlt } from 'react-icons/fa'
 import { IoSettingsSharp } from 'react-icons/io5'
-import { MdLogout, MdLockOutline, MdOutlineHelp, MdMenu, MdClose } from 'react-icons/md'
+import {
+  MdLogout,
+  MdLockOutline,
+  MdOutlineHelp,
+  MdMenu,
+  MdClose,
+  MdInsertChart,
+} from 'react-icons/md'
 import { NavItem } from './NavItem'
 import { NavItemContainer } from './NavItemContainer'
 import { styles } from './index.styles'
@@ -26,10 +32,10 @@ export const Nav: React.FC<Props> = () => {
           isActive={pathname === '/profile'}
         />
         <NavItem
-          title='Messages'
-          icon={BsFillChatFill}
-          path={'/'}
-          isActive={pathname === 'Messages'}
+          title='Skills'
+          icon={MdInsertChart}
+          path={'/skills'}
+          isActive={pathname === '/skills'}
         />
         <NavItem
           title='Setting'

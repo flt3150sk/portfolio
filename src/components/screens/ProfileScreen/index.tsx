@@ -39,13 +39,13 @@ export const ProfileScreen: React.FC<Props> = () => {
       />
       <ProfileHistory
         dateStr='2018.04'
-        text='恩師に誘ってもらい、昔通っていた塾に社員として入る。1年半後くらいに社内政治で恩師がクビになる。プログラミングの講座もしていたため、興味が出て独学する。'
+        text='恩師に誘ってもらい、昔通っていた塾に社員として入る。1年半後くらいに社内政治で恩師が解雇されてショックを受ける。プログラミングの講座もしていたため、興味が出て独学する。'
         imgSrc={'/img/school.png'}
         imgAlt={'プログラミングの写真'}
       />
       <ProfileHistory
         dateStr='2020.04'
-        text='エンジニアとして働き始める。フロント(React, TypeScript)が中心で、バックエンド(Rails)がちょろっと感じです。インフラは全然わかっていないので勉強しなきゃ...'
+        text='エンジニアとして働き始める。フロント(React, TypeScript)が中心で、バックエンド(Rails)がちょろっとかける感じです。インフラは全然わかっていないので勉強しなきゃ...'
         imgSrc={'/img/programming.png'}
         imgAlt={'プログラミングの写真'}
       />
