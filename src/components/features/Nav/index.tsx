@@ -19,11 +19,31 @@ export const Nav: React.FC<Props> = () => {
     <nav css={[styles.navigation, isMenuOpen ? styles.wide : styles.narrow]}>
       <NavItemContainer>
         <NavItem title='Home' icon={FaHome} path={'/'} isActive={pathname === '/'} />
-        <NavItem title='Profile' icon={FaUserAlt} path={'/profile'} isActive={pathname === '/profile'} />
-        <NavItem title='Messages' icon={BsFillChatFill} path={'/'} isActive={pathname === 'Messages'} />
-        <NavItem title='Setting' icon={IoSettingsSharp} path={'/'} isActive={pathname === 'Setting'} />
+        <NavItem
+          title='Profile'
+          icon={FaUserAlt}
+          path={'/profile'}
+          isActive={pathname === '/profile'}
+        />
+        <NavItem
+          title='Messages'
+          icon={BsFillChatFill}
+          path={'/'}
+          isActive={pathname === 'Messages'}
+        />
+        <NavItem
+          title='Setting'
+          icon={IoSettingsSharp}
+          path={'/'}
+          isActive={pathname === 'Setting'}
+        />
         <NavItem title='Help' icon={MdOutlineHelp} path={'/'} isActive={pathname === 'Help'} />
-        <NavItem title='Password' icon={MdLockOutline} path={'/'} isActive={pathname === 'Password'} />
+        <NavItem
+          title='Password'
+          icon={MdLockOutline}
+          path={'/'}
+          isActive={pathname === 'Password'}
+        />
         <NavItem title='SignOut' icon={MdLogout} path={'/'} isActive={pathname === 'SignOut'} />
       </NavItemContainer>
       <div css={styles.menuContainer}>

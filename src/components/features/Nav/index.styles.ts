@@ -2,6 +2,8 @@ import { css } from '@emotion/react'
 
 export const styles = {
   navigation: css`
+    position: sticky;
+    top: 20px;
     height: calc(100vh - 40px);
     border-radius: 10px;
     box-sizing: initial;

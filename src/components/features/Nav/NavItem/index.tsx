@@ -15,9 +15,7 @@ export const NavItem: React.FC<Props> = (props) => {
   return (
     <Link href={props.path}>
       <a css={styles.anchor}>
-        <div
-          css={[styles.navItem, props.isActive ? styles.active : styles.notActive]}
-        >
+        <div css={[styles.navItem, props.isActive ? styles.active : styles.notActive]}>
           <IconTagName css={styles.icon} />
           <span css={styles.title}>{props.title}</span>
         </div>
