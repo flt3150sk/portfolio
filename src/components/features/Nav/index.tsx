@@ -21,44 +21,44 @@ export const Nav: React.FC<Props> = () => {
         <NavItem
           title='Home'
           icon={FaHome}
+          path={'/'}
           isActive={nav === 'Home'}
-          onClick={() => setNav('Home')}
         />
         <NavItem
           title='Profile'
           icon={FaUserAlt}
+          path={'/profile'}
           isActive={nav === 'Profile'}
-          onClick={() => setNav('Profile')}
         />
         <NavItem
           title='Messages'
           icon={BsFillChatFill}
+          path={'/'}
           isActive={nav === 'Messages'}
-          onClick={() => setNav('Messages')}
         />
         <NavItem
           title='Setting'
           icon={IoSettingsSharp}
+          path={'/'}
           isActive={nav === 'Setting'}
-          onClick={() => setNav('Setting')}
         />
         <NavItem
           title='Help'
           icon={MdOutlineHelp}
+          path={'/'}
           isActive={nav === 'Help'}
-          onClick={() => setNav('Help')}
         />
         <NavItem
           title='Password'
           icon={MdLockOutline}
+          path={'/'}
           isActive={nav === 'Password'}
-          onClick={() => setNav('Password')}
         />
         <NavItem
           title='SignOut'
           icon={MdLogout}
+          path={'/'}
           isActive={nav === 'SignOut'}
-          onClick={() => setNav('SignOut')}
         />
       </NavItemContainer>
       <div css={styles.menuContainer}>

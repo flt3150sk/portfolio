@@ -1,6 +1,9 @@
 import { css } from '@emotion/react'
 
 export const styles = {
+  anchor: css`
+    text-decoration: none;
+  `,
   navItem: css`
     border: none;
     cursor: pointer;

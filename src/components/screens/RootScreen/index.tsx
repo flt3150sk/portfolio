@@ -14,10 +14,11 @@ export const RootScreen: React.FC<Props> = () => {
           ))}
         </h1>
         <p css={styles.text}>
-          It is a collection of my past works and skills I have acquired.
-          <br /> I created this site to let you know more about me.
+          これまでに手がけた制作物、身につけたスキルをまとめています。
           <br />
-          Please enjoy a cup of tea and take a leisurely stroll around the site.
+          あなたに、私のことをもっと深く知ってほしいと思って作りました。
+          <br />
+          どうぞお茶でも飲みながらごゆるりとサイト内を散策してください。
         </p>
       </section>
     </div>
