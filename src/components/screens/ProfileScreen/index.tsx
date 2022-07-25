@@ -1,5 +1,5 @@
 import { styles } from './index.styles'
-import { ProfileHistory } from '~/components/features/Nav/ProfileHistory'
+import { ProfileHistory } from '~/components/features/ProfileHistory'
 
 type Props = {}
 
