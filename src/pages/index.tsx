@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { RootScreen } from '~/components/screens/RootScreen'
 
-const Home: NextPage = () => {
+const Page: NextPage = () => {
   return (
     <>
       <Head>
@@ -15,4 +15,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Page
