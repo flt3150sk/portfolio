@@ -1,22 +1,17 @@
 import { css } from '@emotion/react'
 
 export const styles = {
-  container: css`
-    width: 100%;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  `,
-  title: css`
-    font-size: 40px;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
-    margin-bottom: 40px;
-  `,
   history: css`
     display: flex;
     gap: 40px;
+    min-height: 256px;
+    opacity: 0;
+    transform: translate(0, 20px);
+    transition: all 500ms;
+  `,
+  scrollIn: css`
+    opacity: 1;
+    transform: translate(0, 0);
   `,
   date: css`
     color: #fff;

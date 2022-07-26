@@ -1,4 +1,5 @@
 import Image, { ImageProps } from 'next/image'
+import { useInView } from 'react-intersection-observer'
 import { styles } from './index.styles'
 
 type Props = {
@@ -9,8 +10,12 @@ type Props = {
 }
 
 export const ProfileHistory: React.FC<Props> = (props) => {
+  const { ref, inView } = useInView({
+    rootMargin: '-200px',
+    triggerOnce: true,
+  })
   return (
-    <div css={styles.history}>
+    <div css={[styles.history, inView ? styles.scrollIn : '']} ref={ref}>
       <span css={styles.date}>{props.dateStr}</span>
       <div css={styles.rightContainer}>
         <div css={styles.image}>
