@@ -43,8 +43,6 @@ export const styles = {
       stroke: ${color};
       stroke-dasharray: 440;
       stroke-dashoffset: calc((440 - (440 * ${num}) / 100));
-      opacity: 0;
-      animation: ${fadeIn} 0.2s linear forwards;
       animation-delay: 0.8s;
     }
   `,
@@ -76,6 +74,9 @@ export const styles = {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    opacity: 0;
+    animation: ${fadeIn} 0.2s linear forwards;
   `,
   numberText: css`
     font-size: 24px;

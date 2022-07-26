@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router'
 import { useCallback, useState } from 'react'
 import { FaHome, FaUserAlt } from 'react-icons/fa'
-import { IoSettingsSharp } from 'react-icons/io5'
 import {
   MdLogout,
   MdLockOutline,
@@ -9,6 +8,7 @@ import {
   MdMenu,
   MdClose,
   MdInsertChart,
+  MdInsertDriveFile
 } from 'react-icons/md'
 import { NavItem } from './NavItem'
 import { NavItemContainer } from './NavItemContainer'
@@ -38,10 +38,10 @@ export const Nav: React.FC<Props> = () => {
           isActive={pathname === '/skills'}
         />
         <NavItem
-          title='Setting'
-          icon={IoSettingsSharp}
-          path={'/'}
-          isActive={pathname === 'Setting'}
+          title='Works'
+          icon={MdInsertDriveFile}
+          path={'/works'}
+          isActive={pathname === '/works'}
         />
         <NavItem title='Help' icon={MdOutlineHelp} path={'/'} isActive={pathname === 'Help'} />
         <NavItem
