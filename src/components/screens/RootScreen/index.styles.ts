@@ -1,4 +1,13 @@
-import { css } from '@emotion/react'
+import { css, keyframes } from '@emotion/react'
+const colorAnimate = keyframes`
+  0% {
+    color: transparent;
+  }
+
+  100% {
+    color: #fff;
+  }
+`
 
 export const styles = {
   container: css`
@@ -17,6 +26,10 @@ export const styles = {
     font-family: 'Poppins', sans-serif;
     color: transparent;
     -webkit-text-stroke: 2px #fff;
+  `,
+  titleWord: (len: number, idx: number) => css`
+    animation: ${colorAnimate} ${2 / len}s linear forwards;
+    animation-delay: ${(idx * 2) / len}s;
   `,
   text: css`
     color: #fff;
